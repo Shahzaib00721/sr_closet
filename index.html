@@ -6,10 +6,7 @@
 <title>SR Closet – Luxury Fashion</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js">
-
-
-</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 <style>
   :root {
     --gold: #c9a84c;
@@ -90,11 +87,9 @@
   }
   .nav-cta:hover { background:var(--gold); color:var(--dark); }
 
-  /* MOBILE MENU */
   .hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; }
   .hamburger span { width:25px; height:1px; background:var(--gold); transition:all 0.3s; }
 
-  /* PAGE SYSTEM */
   .page { display:none; animation:fadeInPage 0.6s ease; }
   .page.active { display:block; }
   @keyframes fadeInPage { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
@@ -168,7 +163,6 @@
   .btn-outline:hover { background:rgba(201,168,76,0.1); }
   @keyframes slideUp { to{opacity:1;transform:translateY(0)} }
 
-  /* 3D FLOATING CARDS */
   .hero-cards {
     position:absolute; right:5%; top:50%; transform:translateY(-50%);
     display:flex; flex-direction:column; gap:1rem; z-index:2;
@@ -199,7 +193,6 @@
   }
   @keyframes shimmer { 0%{transform:translateX(-100%)} 100%{transform:translateX(200%)} }
 
-  /* SCROLL INDICATOR */
   .scroll-ind {
     position:absolute; bottom:2rem; left:50%; transform:translateX(-50%);
     display:flex; flex-direction:column; align-items:center; gap:0.5rem;
@@ -212,7 +205,6 @@
   }
   @keyframes bounce { 0%,100%{transform:translateX(-50%) translateY(0)} 50%{transform:translateX(-50%) translateY(8px)} }
 
-  /* MARQUEE */
   .marquee-wrap {
     background:var(--gold); padding:0.8rem 0; overflow:hidden;
     position:relative; z-index:3;
@@ -228,7 +220,6 @@
   }
   @keyframes marquee { from{transform:translateX(0)} to{transform:translateX(-50%)} }
 
-  /* SECTION STYLES */
   section { padding:6rem 3rem; max-width:1400px; margin:0 auto; }
   .section-label {
     font-size:0.6rem; letter-spacing:0.5em; text-transform:uppercase;
@@ -243,7 +234,6 @@
   }
   .section-title em { color:var(--gold); font-style:italic; }
 
-  /* COLLECTIONS GRID */
   .collections-grid {
     display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
     gap:1.5rem; margin-top:3rem;
@@ -253,7 +243,6 @@
     border:1px solid rgba(201,168,76,0.12);
     overflow:hidden; position:relative; cursor:pointer;
     transition:transform 0.4s, border-color 0.4s;
-    group:hover;
   }
   .collection-card:hover { transform:translateY(-8px); border-color:rgba(201,168,76,0.4); }
   .card-img {
@@ -261,7 +250,7 @@
     display:flex; align-items:center; justify-content:center;
   }
   .card-img-inner {
-    width:100%; 
+    width:100%;
     display:flex; align-items:center; justify-content:center;
     font-size:5rem; transition:transform 0.5s;
     position:relative;
@@ -282,16 +271,13 @@
     padding:0.3rem 0.6rem; font-weight:700;
   }
 
-  /* DRESS BACKGROUNDS */
   .dress-bg-1 { background:linear-gradient(135deg, #1a1208, #0d0d0d); }
-  .dress-emoji-1::before { content:'👗'; display:block; font-size:5rem; }
   .dress-bg-2 { background:linear-gradient(135deg, #0d1a0d, #0d0d0d); }
   .dress-bg-3 { background:linear-gradient(135deg, #0d0d1a, #0d0d0d); }
   .dress-bg-4 { background:linear-gradient(135deg, #1a0d0d, #0d0d0d); }
   .dress-bg-5 { background:linear-gradient(135deg, #140d1a, #0d0d0d); }
   .dress-bg-6 { background:linear-gradient(135deg, #0d1414, #0d0d0d); }
 
-  /* SLIDER */
   .slider-section { background:var(--dark2); padding:5rem 0; overflow:hidden; }
   .slider-header { text-align:center; margin-bottom:3rem; }
   .slider-container { position:relative; }
@@ -332,7 +318,6 @@
   }
   .slider-btn:hover { background:var(--gold); color:var(--dark); }
 
-  /* 3D SHOWCASE */
   .showcase-3d {
     display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center; margin-top:3rem;
   }
@@ -374,7 +359,6 @@
   }
   .features-list li::before { content:'✦'; color:var(--gold); font-size:0.6rem; }
 
-  /* ABOUT PAGE */
   .about-hero {
     min-height:50vh; display:flex; align-items:center;
     background:linear-gradient(135deg, #0d0d0d, #1a1208);
@@ -390,7 +374,6 @@
   .stat-num { font-family:'Cormorant Garamond',serif; font-size:3rem; color:var(--gold); }
   .stat-label { font-size:0.65rem; letter-spacing:0.3em; color:var(--text-dim); text-transform:uppercase; }
 
-  /* SERVICES PAGE */
   .services-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); gap:2rem; margin-top:3rem; }
   .service-card {
     background:var(--dark2); border:1px solid rgba(201,168,76,0.1);
@@ -414,7 +397,6 @@
   }
   .service-btn:hover { gap:1rem; }
 
-  /* GALLERY PAGE */
   .gallery-header { padding:8rem 3rem 3rem; text-align:center; }
   .gallery-filters {
     display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; margin-bottom:3rem;
@@ -447,7 +429,6 @@
   }
   .gallery-caption span { display:block; color:var(--text-dim); font-family:'Montserrat',sans-serif; font-size:0.7rem; letter-spacing:0.1em; margin-top:0.2rem; }
 
-  /* CONTACT PAGE */
   .contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:5rem; align-items:start; }
   .contact-info h2 { font-family:'Cormorant Garamond',serif; font-size:3.5rem; color:var(--cream); line-height:1.1; }
   .contact-detail {
@@ -469,7 +450,6 @@
   .form-textarea { height:140px; resize:vertical; }
   .form-row { display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
 
-  /* FOOTER */
   footer {
     background:var(--dark2); border-top:1px solid rgba(201,168,76,0.1);
     padding:4rem 3rem 2rem;
@@ -496,7 +476,6 @@
   }
   .social-link:hover { border-color:var(--gold); color:var(--gold); background:rgba(201,168,76,0.1); }
 
-  /* TOAST */
   .toast {
     position:fixed; bottom:2rem; right:2rem; z-index:9999;
     background:var(--gold); color:var(--dark);
@@ -505,24 +484,13 @@
   }
   .toast.show { transform:translateX(0); }
 
-  /* SIDE ENTRY ANIMATION */
-  .side-entry {
-    opacity:0; transform:translateX(-60px);
-    transition:all 0.8s ease;
-  }
+  .side-entry { opacity:0; transform:translateX(-60px); transition:all 0.8s ease; }
   .side-entry.visible { opacity:1; transform:translateX(0); }
-  .side-entry-right {
-    opacity:0; transform:translateX(60px);
-    transition:all 0.8s ease;
-  }
+  .side-entry-right { opacity:0; transform:translateX(60px); transition:all 0.8s ease; }
   .side-entry-right.visible { opacity:1; transform:translateX(0); }
-  .fade-up {
-    opacity:0; transform:translateY(40px);
-    transition:all 0.7s ease;
-  }
+  .fade-up { opacity:0; transform:translateY(40px); transition:all 0.7s ease; }
   .fade-up.visible { opacity:1; transform:translateY(0); }
 
-  /* RESPONSIVE */
   @media(max-width:1024px) {
     .gallery-masonry { columns:3; }
     .showcase-3d { grid-template-columns:1fr; }
@@ -545,7 +513,6 @@
     .about-stats { grid-template-columns:1fr; }
   }
 
-  /* MOBILE NAV */
   .mobile-nav {
     display:none; position:fixed; inset:0; z-index:999;
     background:rgba(13,13,13,0.98); flex-direction:column;
@@ -560,6 +527,295 @@
   .mobile-close {
     position:absolute; top:1.5rem; right:1.5rem;
     background:none; border:none; color:var(--gold); font-size:2rem; cursor:pointer;
+  }
+
+  /* PRODUCT MODAL */
+  .modal-overlay {
+    position:fixed; inset:0; z-index:9998;
+    background:rgba(0,0,0,0.92);
+    display:flex; align-items:center; justify-content:center;
+    opacity:0; visibility:hidden;
+    transition:all 0.4s;
+    padding:1rem;
+  }
+  .modal-overlay.open { opacity:1; visibility:visible; }
+  .modal-box {
+    background:var(--dark2);
+    border:1px solid rgba(201,168,76,0.25);
+    max-width:900px; width:100%;
+    max-height:90vh; overflow-y:auto;
+    display:grid; grid-template-columns:1fr 1fr;
+    transform:translateY(40px);
+    transition:transform 0.4s;
+    scrollbar-width:none;
+  }
+  .modal-box::-webkit-scrollbar { display:none; }
+  .modal-overlay.open .modal-box { transform:translateY(0); }
+  .modal-imgs { padding:2rem; background:var(--dark3); }
+  .modal-main-img {
+    width:100%; height:320px; object-fit:contain;
+    border:1px solid rgba(201,168,76,0.1); margin-bottom:1rem;
+    background:linear-gradient(135deg,#1a1208,#0d0d0d);
+  }
+  .modal-thumbs { display:flex; gap:0.6rem; flex-wrap:wrap; }
+  .modal-thumb {
+    width:70px; height:80px; object-fit:cover;
+    border:1px solid rgba(201,168,76,0.2); cursor:pointer;
+    transition:border-color 0.3s; opacity:0.7;
+    background:linear-gradient(135deg,#1a1208,#0d0d0d);
+  }
+  .modal-thumb.active, .modal-thumb:hover { border-color:var(--gold); opacity:1; }
+  .modal-details { padding:2.5rem; }
+  .modal-brand { font-size:0.6rem; letter-spacing:0.4em; color:var(--gold); text-transform:uppercase; margin-bottom:0.5rem; }
+  .modal-name { font-family:'Cormorant Garamond',serif; font-size:2.2rem; color:var(--cream); margin-bottom:0.5rem; line-height:1.1; }
+  .modal-price { font-size:1.4rem; color:var(--gold); margin-bottom:1.5rem; }
+  .modal-desc { color:var(--text-dim); font-size:0.85rem; line-height:1.9; margin-bottom:1.5rem; }
+  .modal-divider { height:1px; background:rgba(201,168,76,0.12); margin:1.5rem 0; }
+  .modal-label { font-size:0.6rem; letter-spacing:0.3em; color:var(--gold); text-transform:uppercase; margin-bottom:0.8rem; }
+  .size-grid { display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:1.5rem; }
+  .size-btn {
+    padding:0.5rem 1rem; border:1px solid rgba(201,168,76,0.25);
+    background:transparent; color:var(--text-dim);
+    font-size:0.75rem; cursor:pointer; transition:all 0.3s;
+    font-family:'Montserrat',sans-serif; letter-spacing:0.1em;
+  }
+  .size-btn:hover, .size-btn.active { border-color:var(--gold); color:var(--gold); background:rgba(201,168,76,0.07); }
+  .modal-info-grid { display:grid; grid-template-columns:1fr 1fr; gap:0.8rem; margin-bottom:1.5rem; }
+  .info-item { display:flex; align-items:center; gap:0.6rem; color:var(--text-dim); font-size:0.8rem; }
+  .info-item span:first-child { color:var(--gold); font-size:1rem; }
+  .modal-btns { display:flex; gap:1rem; margin-top:1rem; }
+  .modal-close-btn {
+    position:sticky; top:0; float:right;
+    background:none; border:none; color:var(--text-dim);
+    font-size:1.5rem; cursor:pointer; padding:0.5rem;
+    transition:color 0.3s; z-index:10;
+  }
+  .modal-close-btn:hover { color:var(--gold); }
+  @media(max-width:768px) {
+    .modal-box { grid-template-columns:1fr; }
+    .modal-main-img { height:250px; }
+  }
+
+  /* =============================================
+     AUTH MODAL
+  ============================================= */
+  .auth-overlay {
+    position: fixed; inset: 0; z-index: 10000;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    display: flex; align-items: center; justify-content: center;
+    padding: 20px;
+    opacity: 0; visibility: hidden;
+    transition: opacity 0.35s ease, visibility 0.35s ease;
+  }
+  .auth-overlay.open {
+    opacity: 1; visibility: visible;
+  }
+  .auth-card {
+    background: var(--dark2);
+    border: 1px solid rgba(201, 168, 76, 0.3);
+    width: 100%; max-width: 820px;
+    display: grid; grid-template-columns: 280px 1fr;
+    position: relative;
+    transform: translateY(30px) scale(0.97);
+    transition: transform 0.35s cubic-bezier(.22,.68,0,1.15);
+    overflow: hidden;
+    max-height: 90vh;
+    overflow-y: auto;
+    scrollbar-width: none;
+  }
+  .auth-card::-webkit-scrollbar { display: none; }
+  .auth-overlay.open .auth-card {
+    transform: translateY(0) scale(1);
+  }
+
+  /* Gold top bar */
+  .auth-card::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold), var(--gold-light), var(--gold), transparent);
+  }
+
+  .auth-close {
+    position: absolute; top: 14px; right: 16px; z-index: 10;
+    background: none; border: none; cursor: pointer;
+    font-size: 1.3rem; color: var(--text-dim); line-height: 1;
+    transition: color 0.2s;
+  }
+  .auth-close:hover { color: var(--gold); }
+
+  /* Left dark panel */
+  .auth-left-panel {
+    background: #0a0a08;
+    padding: 48px 32px;
+    display: flex; flex-direction: column;
+    justify-content: space-between;
+    position: relative; overflow: hidden;
+    border-right: 1px solid rgba(201, 168, 76, 0.1);
+  }
+  .auth-left-panel::before {
+    content: '';
+    position: absolute; top: -80px; right: -80px;
+    width: 220px; height: 220px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(201,168,76,0.12) 0%, transparent 70%);
+  }
+  .auth-left-panel::after {
+    content: '';
+    position: absolute; bottom: -60px; left: -60px;
+    width: 180px; height: 180px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(201,168,76,0.07) 0%, transparent 70%);
+  }
+  .alp-brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6rem; font-weight: 700;
+    letter-spacing: 0.25em; color: var(--gold);
+    position: relative; z-index: 1;
+  }
+  .alp-sub {
+    font-size: 0.58rem; letter-spacing: 0.22em;
+    text-transform: uppercase; color: var(--text-dim);
+    margin-top: 5px; position: relative; z-index: 1;
+  }
+  .alp-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.05rem; font-weight: 300; font-style: italic;
+    line-height: 1.75; color: var(--gold-light);
+    position: relative; z-index: 1;
+  }
+  .alp-quote::before {
+    content: '\201C'; font-size: 3rem; color: var(--gold);
+    line-height: 0; vertical-align: -1rem; margin-right: 2px;
+  }
+  .alp-features { position: relative; z-index: 1; }
+  .alp-features li {
+    list-style: none; font-size: 0.62rem;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--text-dim); display: flex;
+    align-items: center; gap: 10px; margin-bottom: 11px;
+  }
+  .alp-features li::before {
+    content: ''; display: block;
+    width: 18px; height: 1px; background: var(--gold); flex-shrink: 0;
+  }
+
+  /* Right form panel */
+  .auth-right-panel {
+    padding: 44px 40px;
+  }
+
+  /* Tabs */
+  .auth-tabs {
+    display: flex;
+    border-bottom: 1px solid rgba(201,168,76,0.15);
+    margin-bottom: 28px;
+  }
+  .auth-tab {
+    flex: 1; padding-bottom: 12px;
+    background: none; border: none;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px; cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.65rem; font-weight: 600;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--text-dim);
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .auth-tab.active {
+    color: var(--gold);
+    border-bottom-color: var(--gold);
+  }
+
+  .auth-panel { display: none; }
+  .auth-panel.active { display: block; }
+
+  .auth-heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem; font-weight: 400;
+    color: var(--cream); margin-bottom: 4px; line-height: 1.1;
+  }
+  .auth-subtext {
+    font-size: 0.76rem; color: var(--text-dim);
+    margin-bottom: 24px; line-height: 1.6;
+  }
+
+  .auth-group { margin-bottom: 15px; }
+  .auth-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+  .auth-group label {
+    display: block; font-size: 0.6rem; font-weight: 600;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--text-dim); margin-bottom: 6px;
+  }
+  .auth-group input {
+    width: 100%; padding: 11px 13px;
+    background: var(--dark3);
+    border: 1px solid rgba(201,168,76,0.2);
+    color: var(--text);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.86rem; outline: none;
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .auth-group input:focus {
+    border-color: var(--gold);
+    background: rgba(201,168,76,0.05);
+  }
+  .auth-group input.auth-err { border-color: #c0614a; }
+
+  .auth-err-msg {
+    font-size: 0.63rem; color: #e07060;
+    margin-top: 4px; display: none;
+  }
+  .auth-err-msg.show { display: block; }
+
+  .auth-forgot {
+    text-align: right; margin: -8px 0 14px;
+  }
+  .auth-forgot a {
+    font-size: 0.67rem; color: var(--text-dim);
+    text-decoration: none; transition: color 0.2s;
+  }
+  .auth-forgot a:hover { color: var(--gold); }
+
+  .auth-submit {
+    width: 100%; padding: 13px;
+    background: var(--gold); color: var(--dark);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.68rem; font-weight: 700;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    border: none; cursor: pointer;
+    transition: background 0.25s, transform 0.1s;
+    margin-top: 4px;
+  }
+  .auth-submit:hover { background: var(--gold-light); }
+  .auth-submit:active { transform: scale(0.99); }
+
+  /* Success */
+  .auth-success {
+    display: none; flex-direction: column;
+    align-items: center; text-align: center;
+    padding: 24px 0; gap: 14px;
+  }
+  .auth-success.show { display: flex; }
+  .auth-success-icon {
+    width: 60px; height: 60px; border-radius: 50%;
+    background: rgba(201,168,76,0.12);
+    border: 1px solid rgba(201,168,76,0.4);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.6rem; color: var(--gold);
+  }
+  .auth-success h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.9rem; font-weight: 400; color: var(--cream);
+  }
+  .auth-success p { font-size: 0.8rem; color: var(--text-dim); line-height: 1.7; }
+
+  @media (max-width: 640px) {
+    .auth-card { grid-template-columns: 1fr; max-width: 380px; }
+    .auth-left-panel { display: none; }
+    .auth-right-panel { padding: 36px 24px; }
+    .auth-row { grid-template-columns: 1fr; }
   }
 </style>
 </head>
@@ -582,15 +838,11 @@
     <li><a href="#" onclick="showPage('about')">About</a></li>
     <li><a href="#" onclick="showPage('contact')">Contact</a></li>
   </ul>
-  <button class="nav-cta" onclick="goToLogin()">Book Now</button> 
-
-
+  <button class="nav-cta" onclick="goToLogin()">Book Now</button>
   <div class="hamburger" onclick="toggleMobile()">
     <span></span><span></span><span></span>
   </div>
 </nav>
-
-
 
 <!-- MOBILE NAV -->
 <div class="mobile-nav" id="mobileNav">
@@ -605,8 +857,6 @@
 
 <!-- ====== HOME PAGE ====== -->
 <div id="page-home" class="page active">
-
-  <!-- HERO -->
   <div id="hero">
     <div class="hero-bg"></div>
     <div class="hero-grid"></div>
@@ -615,8 +865,7 @@
     <div class="hero-content">
       <div class="hero-tag">✦ Luxury Fashion House ✦ Est. 2026</div>
       <h1 class="hero-title">SR<br><span>Closet</span></h1>
-      <p class="hero-sub">Jahan style milta hai shaan se - premium women's clothing 
-SR closet brings you international fashion at your doorstep now!!</p>
+      <p class="hero-sub">Jahan style milta hai shaan se - premium women's clothing SR closet brings you international fashion at your doorstep now!!</p>
       <div class="hero-btns">
         <button class="btn-primary" onclick="showPage('collections')">Explore Collection</button>
         <button class="btn-outline" onclick="showPage('gallery')">View Gallery</button>
@@ -630,59 +879,34 @@ SR closet brings you international fashion at your doorstep now!!</p>
     <div class="scroll-ind">Scroll</div>
   </div>
 
-  <!-- MARQUEE -->
   <div class="marquee-wrap">
     <div class="marquee-track">
-      <span class="marquee-item">✦ SR CLOSET</span>
-      <span class="marquee-item">✦ Luxury Fashion</span>
-      <span class="marquee-item">✦ Premium Quality</span>
-      <span class="marquee-item">✦ Bridal Collection</span>
-      <span class="marquee-item">✦ Party Wear</span>
-      <span class="marquee-item">✦ Lawn Prints</span>
-      <span class="marquee-item">✦ Formal Wear</span>
-      <span class="marquee-item">✦ SR CLOSET</span>
-      <span class="marquee-item">✦ Luxury Fashion</span>
-      <span class="marquee-item">✦ Premium Quality</span>
-      <span class="marquee-item">✦ Bridal Collection</span>
-      <span class="marquee-item">✦ Party Wear</span>
-      <span class="marquee-item">✦ Lawn Prints</span>
-      <span class="marquee-item">✦ Formal Wear</span>
+      <span class="marquee-item">✦ SR CLOSET</span><span class="marquee-item">✦ Luxury Fashion</span><span class="marquee-item">✦ Premium Quality</span><span class="marquee-item">✦ Bridal Collection</span><span class="marquee-item">✦ Party Wear</span><span class="marquee-item">✦ Lawn Prints</span><span class="marquee-item">✦ Formal Wear</span><span class="marquee-item">✦ SR CLOSET</span><span class="marquee-item">✦ Luxury Fashion</span><span class="marquee-item">✦ Premium Quality</span><span class="marquee-item">✦ Bridal Collection</span><span class="marquee-item">✦ Party Wear</span><span class="marquee-item">✦ Lawn Prints</span><span class="marquee-item">✦ Formal Wear</span>
     </div>
   </div>
 
-  <!-- FEATURED COLLECTIONS -->
   <section>
     <div class="section-label">Our Latest</div>
     <h2 class="section-title side-entry">Featured <em>Collections</em></h2>
     <div class="collections-grid">
-      <div class="collection-card fade-up" style="transition-delay:0.1s">
-       <div class="collection-card fade-up" style="transition-delay:0.1s">
-
-
-  <div class="card-img dress-bg-1">
-    
-    <div class="card-img-inner" style="display:flex; align-items:center; justify-content:center; overflow:hidden;">
-      <img src="/red2.jpeg" style="max-width:100%; max-height:100%; object-fit:contain;" />
-    </div>
-
-    <div class="card-overlay">
-      <div class="card-category">Bridal</div>
-      <div class="card-name">Gulnaar Bridal</div>
-      <div class="card-price">INR 1,999</div>
-    </div>
-
-    <div class="card-badge">New</div>
-  </div>
-</div>
-
-
-
+      <div class="collection-card fade-up" style="transition-delay:0.1s; cursor:pointer" onclick="openGulnaar()">
+        <div class="card-img dress-bg-1">
+          <div class="card-img-inner" style="display:flex; align-items:center; justify-content:center; overflow:hidden;">
+            <img src="/red2.jpeg" style="max-width:100%; max-height:100%; object-fit:contain;" />
+          </div>
+          <div class="card-overlay">
+            <div class="card-category">Bridal</div>
+            <div class="card-name">Gulnaar Bridal</div>
+            <div class="card-price">INR 1,999</div>
+          </div>
+          <div class="card-badge">New</div>
+        </div>
       </div>
-      <div class="collection-card fade-up" style="transition-delay:0.2s">
+      <div class="collection-card fade-up" style="transition-delay:0.2s; cursor:pointer" onclick="openRoshni()">
         <div class="card-img dress-bg-2">
           <div class="card-img-inner" style="display:flex; align-items:center; justify-content:center; overflow:hidden;"><img src="pink.jpeg" style="max-width:100%; max-height:100%; object-fit:contain" alt=""></div>
           <div class="card-overlay">
-            <div class="card-category">Party Wear</div> 
+            <div class="card-category">Party Wear</div>
             <div class="card-name">Roshni Party Suit</div>
             <div class="card-price">INR 2,500</div>
           </div>
@@ -701,7 +925,7 @@ SR closet brings you international fashion at your doorstep now!!</p>
       </div>
       <div class="collection-card fade-up" style="transition-delay:0.4s">
         <div class="card-img dress-bg-4">
-          <div class="card-img-inner " style="display:flex; align-items:center; justify-content:center; overflow:hidden;"><img src="pic2.jpeg" style="max-width:100%; max-height:100%; object-fit:contain" alt=""></div>
+          <div class="card-img-inner" style="display:flex; align-items:center; justify-content:center; overflow:hidden;"><img src="pic2.jpeg" style="max-width:100%; max-height:100%; object-fit:contain" alt=""></div>
           <div class="card-overlay">
             <div class="card-category">Casual</div>
             <div class="card-name">Zara Casual Lawn</div>
@@ -715,7 +939,6 @@ SR closet brings you international fashion at your doorstep now!!</p>
     </div>
   </section>
 
-  <!-- SLIDER -->
   <div class="slider-section">
     <div class="slider-header">
       <div class="section-label" style="justify-content:center">New Arrivals</div>
@@ -723,54 +946,12 @@ SR closet brings you international fashion at your doorstep now!!</p>
     </div>
     <div class="slider-container">
       <div class="slider-track" id="mainSlider">
-        <div class="slide-item">
-          <div class="slide-img dress-bg-1"><img src="pic3.jpeg" style="max-width:100%;  object-fit:contain;" /></div>
-          <div class="slide-info">
-            <div class="slide-tag">Bridal • 2025</div>
-            <div class="slide-name">Anarkali Bridal Suit</div>
-            <div class="slide-price">INR 2,000</div>
-          </div>
-        </div>
-        <div class="slide-item">
-          <div class="slide-img dress-bg-2"><img src="/pic4.jpeg" style="max-height:100%; object-fit:contain;" /></div>
-          <div class="slide-info">
-            <div class="slide-tag">Party • New</div>
-            <div class="slide-name">Izhar Sharara Set</div>
-            <div class="slide-price">INR 2,500</div>
-          </div>
-        </div>
-        <div class="slide-item">
-          <div class="slide-img dress-bg-5"><img src="pic5.jpeg" style=" max-height:100%; object-fit:contain;" /></div>
-          <div class="slide-info">
-            <div class="slide-tag">Casual • Summer</div>
-            <div class="slide-name">Noor Printed Lawn</div>
-            <div class="slide-price">INR 2,200</div>
-          </div>
-        </div>
-        <div class="slide-item">
-          <div class="slide-img dress-bg-3"><img src="pic6.jpeg" style=" max-height:100%; object-fit:contain;" /></div>
-          <div class="slide-info">
-            <div class="slide-tag">Formal • Premium</div>
-            <div class="slide-name">Zehra Formal Gown</div>
-            <div class="slide-price">INR 2,000</div>
-          </div>
-        </div>
-        <div class="slide-item">
-          <div class="slide-img dress-bg-6"><img src="pic7.jpeg" style=" max-height:100%; object-fit:contain;" /></div>
-          <div class="slide-info">
-            <div class="slide-tag">Eid • Special</div>
-            <div class="slide-name">Eid Embroidered Set</div>
-            <div class="slide-price">INR 2,000</div>
-          </div>
-        </div>
-        <div class="slide-item">
-          <div class="slide-img dress-bg-4"><img src="pic8.jpeg" style=" max-height:100%; object-fit:contain;" /></div>
-          <div class="slide-info">
-            <div class="slide-tag">Luxury • Limited</div>
-            <div class="slide-name">Royal Velvet Suit</div>
-            <div class="slide-price">INR 2,000</div>
-          </div>
-        </div>
+        <div class="slide-item"><div class="slide-img dress-bg-1"><img src="pic3.jpeg" style="max-width:100%; object-fit:contain;" /></div><div class="slide-info"><div class="slide-tag">Bridal • 2025</div><div class="slide-name">Anarkali Bridal Suit</div><div class="slide-price">INR 2,000</div></div></div>
+        <div class="slide-item"><div class="slide-img dress-bg-2"><img src="/pic4.jpeg" style="max-height:100%; object-fit:contain;" /></div><div class="slide-info"><div class="slide-tag">Party • New</div><div class="slide-name">Izhar Sharara Set</div><div class="slide-price">INR 2,500</div></div></div>
+        <div class="slide-item"><div class="slide-img dress-bg-5"><img src="pic5.jpeg" style="max-height:100%; object-fit:contain;" /></div><div class="slide-info"><div class="slide-tag">Casual • Summer</div><div class="slide-name">Noor Printed Lawn</div><div class="slide-price">INR 2,200</div></div></div>
+        <div class="slide-item"><div class="slide-img dress-bg-3"><img src="pic6.jpeg" style="max-height:100%; object-fit:contain;" /></div><div class="slide-info"><div class="slide-tag">Formal • Premium</div><div class="slide-name">Zehra Formal Gown</div><div class="slide-price">INR 2,000</div></div></div>
+        <div class="slide-item"><div class="slide-img dress-bg-6"><img src="pic7.jpeg" style="max-height:100%; object-fit:contain;" /></div><div class="slide-info"><div class="slide-tag">Eid • Special</div><div class="slide-name">Eid Embroidered Set</div><div class="slide-price">INR 2,000</div></div></div>
+        <div class="slide-item"><div class="slide-img dress-bg-4"><img src="pic8.jpeg" style="max-height:100%; object-fit:contain;" /></div><div class="slide-info"><div class="slide-tag">Luxury • Limited</div><div class="slide-name">Royal Velvet Suit</div><div class="slide-price">INR 2,000</div></div></div>
       </div>
     </div>
     <div class="slider-controls">
@@ -779,7 +960,6 @@ SR closet brings you international fashion at your doorstep now!!</p>
     </div>
   </div>
 
-  <!-- 3D SHOWCASE -->
   <section>
     <div class="showcase-3d">
       <div class="cube-wrapper">
@@ -806,9 +986,7 @@ SR closet brings you international fashion at your doorstep now!!</p>
       </div>
     </div>
   </section>
-
 </div>
-<!-- END HOME -->
 
 <!-- ====== COLLECTIONS PAGE ====== -->
 <div id="page-collections" class="page">
@@ -817,8 +995,6 @@ SR closet brings you international fashion at your doorstep now!!</p>
     <h1 class="section-title">All <em>Collections</em></h1>
     <p style="color:var(--text-dim); max-width:500px; margin:0 auto; font-size:0.9rem; line-height:1.8">india ke best designers ke saath milkar banai gayi exclusive collections</p>
   </div>
-
-  <!-- SLIDER 1: Bridal -->
   <section>
     <div class="section-label">Category 01</div>
     <h2 class="section-title">Bridal <em>Collection</em></h2>
@@ -836,8 +1012,6 @@ SR closet brings you international fashion at your doorstep now!!</p>
       <button class="slider-btn" onclick="slideRight('bridalSlider')">→</button>
     </div>
   </section>
-
-  <!-- SLIDER 2: Party -->
   <div style="background:var(--dark2); padding:1px 0">
   <section>
     <div class="section-label">Category 02</div>
@@ -857,8 +1031,6 @@ SR closet brings you international fashion at your doorstep now!!</p>
     </div>
   </section>
   </div>
-
-  <!-- SLIDER 3: Casual/Lawn -->
   <section>
     <div class="section-label">Category 03</div>
     <h2 class="section-title">Casual & <em>Lawn</em></h2>
@@ -877,7 +1049,6 @@ SR closet brings you international fashion at your doorstep now!!</p>
     </div>
   </section>
 </div>
-<!-- END COLLECTIONS -->
 
 <!-- ====== GALLERY PAGE ====== -->
 <div id="page-gallery" class="page">
@@ -908,7 +1079,6 @@ SR closet brings you international fashion at your doorstep now!!</p>
     <div class="gallery-item" data-cat="bridal"><div class="gallery-img" style="height:280px;background:linear-gradient(135deg,#0d1414,#0d0d0d)"><span class="gallery-img-emoji">👑</span></div><div class="gallery-caption">Barat Lehenga<span>Bridal • Grand</span></div></div>
   </div>
 </div>
-<!-- END GALLERY -->
 
 <!-- ====== SERVICES PAGE ====== -->
 <div id="page-services" class="page">
@@ -919,72 +1089,26 @@ SR closet brings you international fashion at your doorstep now!!</p>
   </div>
   <section>
     <div class="services-grid">
-      <div class="service-card fade-up">
-        <div class="service-icon">👗</div>
-        <div class="service-title">Ready-to-Wear</div>
-        <div class="service-desc">Humari ready-made collection mein thousands of designs available hain — bridal, party, casual sab categories mein. Standard sizes aur premium finishing guaranteed.</div>
-        <button class="service-btn" onclick="showPage('collections')">Explore →</button>
-      </div>
-      <div class="service-card fade-up" style="transition-delay:0.1s">
-        <div class="service-icon">✂️</div>
-        <div class="service-title">Custom Stitching</div>
-        <div class="service-desc">Apni pasand ka design lain, aur hum aap ke liye custom stitch karenge. Measurements lena, design finalize karna, aur delivery — sab kuch hum handle karte hain.</div>
-        <button class="service-btn" onclick="showPage('contact')">Book Now →</button>
-      </div>
-      <div class="service-card fade-up" style="transition-delay:0.2s">
-        <div class="service-icon">💍</div>
-        <div class="service-title">Bridal Package</div>
-        <div class="service-desc">Complete bridal coordination — mehndi se le kar walima tak. Lehenga, jewellery coordination, dupatta styling, aur makeup consultation bhi included hai premium package mein.</div>
-        <button class="service-btn" onclick="showPage('contact')">Inquire →</button>
-      </div>
-      <div class="service-card fade-up" style="transition-delay:0.3s">
-        <div class="service-icon">🚚</div>
-        <div class="service-title">Nationwide Delivery</div>
-        <div class="service-desc">India ke kisi bhi city mein 3-5 working days mein deliver karte hain. Secure packaging, tracking number, aur damage guarantee ke saath.</div>
-        <button class="service-btn" onclick="showPage('contact')">Learn More →</button>
-      </div>
-      <div class="service-card fade-up" style="transition-delay:0.4s">
-        <div class="service-icon">🎨</div>
-        <div class="service-title">Style Consultation</div>
-        <div class="service-desc">Kya pehenna chahiye? Humari expert team aap ki personality aur occasion ke hisaab se best outfit recommend karegi — bilkul free!</div>
-        <button class="service-btn" onclick="showPage('contact')">Book Free Session →</button>
-      </div>
-      <div class="service-card fade-up" style="transition-delay:0.5s">
-        <div class="service-icon">🔄</div>
-        <div class="service-title">Easy Exchange</div>
-        <div class="service-desc">Size ya design pasand nahi aaya? No problem. 7 din ke andar exchange ya return kar saktay hain — koi sawal nahi puchha jayega.</div>
-        <button class="service-btn" onclick="showPage('contact')">Policy Details →</button>
-      </div>
+      <div class="service-card fade-up"><div class="service-icon">👗</div><div class="service-title">Ready-to-Wear</div><div class="service-desc">Humari ready-made collection mein thousands of designs available hain — bridal, party, casual sab categories mein.</div><button class="service-btn" onclick="showPage('collections')">Explore →</button></div>
+      <div class="service-card fade-up" style="transition-delay:0.1s"><div class="service-icon">✂️</div><div class="service-title">Custom Stitching</div><div class="service-desc">Apni pasand ka design lain, aur hum aap ke liye custom stitch karenge.</div><button class="service-btn" onclick="showPage('contact')">Book Now →</button></div>
+      <div class="service-card fade-up" style="transition-delay:0.2s"><div class="service-icon">💍</div><div class="service-title">Bridal Package</div><div class="service-desc">Complete bridal coordination — mehndi se le kar walima tak.</div><button class="service-btn" onclick="showPage('contact')">Inquire →</button></div>
+      <div class="service-card fade-up" style="transition-delay:0.3s"><div class="service-icon">🚚</div><div class="service-title">Nationwide Delivery</div><div class="service-desc">India ke kisi bhi city mein 3-5 working days mein deliver karte hain.</div><button class="service-btn" onclick="showPage('contact')">Learn More →</button></div>
+      <div class="service-card fade-up" style="transition-delay:0.4s"><div class="service-icon">🎨</div><div class="service-title">Style Consultation</div><div class="service-desc">Humari expert team aap ki personality ke hisaab se best outfit recommend karegi — bilkul free!</div><button class="service-btn" onclick="showPage('contact')">Book Free Session →</button></div>
+      <div class="service-card fade-up" style="transition-delay:0.5s"><div class="service-icon">🔄</div><div class="service-title">Easy Exchange</div><div class="service-desc">7 din ke andar exchange ya return kar saktay hain — koi sawal nahi puchha jayega.</div><button class="service-btn" onclick="showPage('contact')">Policy Details →</button></div>
     </div>
   </section>
-
-  <!-- Pricing -->
   <div style="background:var(--dark2); padding:1px 0">
   <section>
     <div class="section-label">Pricing</div>
     <h2 class="section-title">Simple, Transparent <em>Rates</em></h2>
     <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1.5rem; margin-top:2rem;">
-      <div style="border:1px solid rgba(201,168,76,0.15); padding:2.5rem; text-align:center;">
-        <div style="font-size:0.65rem;letter-spacing:0.3em;color:var(--text-dim);text-transform:uppercase;margin-bottom:1rem">Casual Stitching</div>
-        <div style="font-family:'Cormorant Garamond',serif;font-size:2.5rem;color:var(--gold)">INR 800</div>
-        <div style="color:var(--text-dim);font-size:0.75rem;margin-top:0.5rem">Per suit</div>
-      </div>
-      <div style="border:2px solid var(--gold); padding:2.5rem; text-align:center; position:relative;">
-        <div style="position:absolute;top:-1px;left:50%;transform:translateX(-50%);background:var(--gold);color:var(--dark);font-size:0.55rem;padding:0.3rem 1rem;letter-spacing:0.2em;text-transform:uppercase;white-space:nowrap">Most Popular</div>
-        <div style="font-size:0.65rem;letter-spacing:0.3em;color:var(--text-dim);text-transform:uppercase;margin-bottom:1rem">Party Wear Stitching</div>
-        <div style="font-family:'Cormorant Garamond',serif;font-size:2.5rem;color:var(--gold)">INR 2,500</div>
-        <div style="color:var(--text-dim);font-size:0.75rem;margin-top:0.5rem">Per suit</div>
-      </div>
-      <div style="border:1px solid rgba(201,168,76,0.15); padding:2.5rem; text-align:center;">
-        <div style="font-size:0.65rem;letter-spacing:0.3em;color:var(--text-dim);text-transform:uppercase;margin-bottom:1rem">Bridal Stitching</div>
-        <div style="font-family:'Cormorant Garamond',serif;font-size:2.5rem;color:var(--gold)">INR 8,000+</div>
-        <div style="color:var(--text-dim);font-size:0.75rem;margin-top:0.5rem">Starting price</div>
-      </div>
+      <div style="border:1px solid rgba(201,168,76,0.15); padding:2.5rem; text-align:center;"><div style="font-size:0.65rem;letter-spacing:0.3em;color:var(--text-dim);text-transform:uppercase;margin-bottom:1rem">Casual Stitching</div><div style="font-family:'Cormorant Garamond',serif;font-size:2.5rem;color:var(--gold)">INR 800</div><div style="color:var(--text-dim);font-size:0.75rem;margin-top:0.5rem">Per suit</div></div>
+      <div style="border:2px solid var(--gold); padding:2.5rem; text-align:center; position:relative;"><div style="position:absolute;top:-1px;left:50%;transform:translateX(-50%);background:var(--gold);color:var(--dark);font-size:0.55rem;padding:0.3rem 1rem;letter-spacing:0.2em;text-transform:uppercase;white-space:nowrap">Most Popular</div><div style="font-size:0.65rem;letter-spacing:0.3em;color:var(--text-dim);text-transform:uppercase;margin-bottom:1rem">Party Wear Stitching</div><div style="font-family:'Cormorant Garamond',serif;font-size:2.5rem;color:var(--gold)">INR 2,500</div><div style="color:var(--text-dim);font-size:0.75rem;margin-top:0.5rem">Per suit</div></div>
+      <div style="border:1px solid rgba(201,168,76,0.15); padding:2.5rem; text-align:center;"><div style="font-size:0.65rem;letter-spacing:0.3em;color:var(--text-dim);text-transform:uppercase;margin-bottom:1rem">Bridal Stitching</div><div style="font-family:'Cormorant Garamond',serif;font-size:2.5rem;color:var(--gold)">INR 8,000+</div><div style="color:var(--text-dim);font-size:0.75rem;margin-top:0.5rem">Starting price</div></div>
     </div>
   </section>
   </div>
 </div>
-<!-- END SERVICES -->
 
 <!-- ====== ABOUT PAGE ====== -->
 <div id="page-about" class="page">
@@ -992,7 +1116,7 @@ SR closet brings you international fashion at your doorstep now!!</p>
     <div style="max-width:700px;margin:0 auto;text-align:center">
       <div class="section-label" style="justify-content:center">Our Story</div>
       <h1 class="section-title">Fashion ka <em>Safar</em></h1>
-      <p style="color:var(--text-dim); line-height:1.9; font-size:0.9rem">SR Closet — ek khwab jo hakikat ban gaya. Aaj hum India ke ek trusted fashion brand hain.</p>
+      <p style="color:var(--text-dim); line-height:1.9; font-size:0.9rem">SR Closet — ek khwab jo hakikat ban gaya.</p>
     </div>
   </div>
   <section>
@@ -1000,8 +1124,8 @@ SR closet brings you international fashion at your doorstep now!!</p>
       <div class="side-entry">
         <div class="section-label">Who We Are</div>
         <h2 class="section-title" style="font-size:2.5rem">Style ka Naya <em>Andaz</em></h2>
-        <p style="color:var(--text-dim); line-height:1.9; margin-bottom:1.5rem; font-size:0.9rem">SR Closet 2024 mein shuru hua ek chota sa sapne ke saath — India women ko affordable luxury fashion provide karna. Aaj humari team 20+ se zyada fashion experts par mushtamil hai.</p>
-        <p style="color:var(--text-dim); line-height:1.9; font-size:0.9rem">Humara believe hai ke acha dress pehenna sirf ameer logon ka haq nahi — har aurat deserve karti hai ke woh best feel kare. Isliye hum har budget ke liye collections offer karte hain.</p>
+        <p style="color:var(--text-dim); line-height:1.9; margin-bottom:1.5rem; font-size:0.9rem">SR Closet 2024 mein shuru hua ek chota sa sapne ke saath — India women ko affordable luxury fashion provide karna.</p>
+        <p style="color:var(--text-dim); line-height:1.9; font-size:0.9rem">Humara believe hai ke acha dress pehenna sirf ameer logon ka haq nahi — har aurat deserve karti hai ke woh best feel kare.</p>
         <div class="about-stats">
           <div class="stat-box"><div class="stat-num">500+</div><div class="stat-label">Happy Clients</div></div>
           <div class="stat-box"><div class="stat-num">1000+</div><div class="stat-label">Designs Available</div></div>
@@ -1012,129 +1136,202 @@ SR closet brings you international fashion at your doorstep now!!</p>
       <div class="side-entry-right">
         <div style="border:1px solid rgba(201,168,76,0.2); padding:3rem; background:var(--dark2)">
           <div style="font-family:'Cormorant Garamond',serif; font-size:5rem; color:var(--gold); line-height:1; margin-bottom:1rem">"</div>
-          <p style="font-family:'Cormorant Garamond',serif; font-size:1.4rem; color:var(--cream); line-height:1.6; margin-bottom:2rem">Fashion is not just about clothes. It is about confidence, expression, and identity. SR Closet dresses you for life's most beautiful moments.</p>
+          <p style="font-family:'Cormorant Garamond',serif; font-size:1.4rem; color:var(--cream); line-height:1.6; margin-bottom:2rem">Fashion is not just about clothes. It is about confidence, expression, and identity.</p>
           <div style="display:flex; align-items:center; gap:1rem">
-            <div style="width:50px;height:50px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;font-size:1.3rem">       <img src="own.JPG" style="width: 100%; height: 100%; border-radius: 50px;" alt=""></div>
-            <div>
-              <div style="color:var(--cream); font-weight:600">Rupali Singh</div>
-              <div style="color:var(--text-dim); font-size:0.75rem; letter-spacing:0.1em">Founder, SR Closet</div>
-            </div>
-          </div>
-        </div>
-        <div style="margin-top:1.5rem; border:1px solid rgba(201,168,76,0.2); padding:2rem; background:var(--dark2)">
-          <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem">
-            <div style="display:flex;align-items:center;gap:0.8rem"><span>🌍</span><span style="color:var(--text-dim);font-size:0.8rem">India-wide Delivery</span></div>
-            <div style="display:flex;align-items:center;gap:0.8rem"><span>✅</span><span style="color:var(--text-dim);font-size:0.8rem">Quality Guaranteed</span></div>
-            <div style="display:flex;align-items:center;gap:0.8rem"><span>💳</span><span style="color:var(--text-dim);font-size:0.8rem">Easy Installments</span></div>
-            <div style="display:flex;align-items:center;gap:0.8rem"><span>🎁</span><span style="color:var(--text-dim);font-size:0.8rem">Gift Wrapping Available</span></div>
+            <div style="width:50px;height:50px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;font-size:1.3rem"><img src="own.JPG" style="width:100%;height:100%;border-radius:50px;" alt=""></div>
+            <div><div style="color:var(--cream); font-weight:600">Rupali Singh</div><div style="color:var(--text-dim); font-size:0.75rem; letter-spacing:0.1em">Founder, SR Closet</div></div>
           </div>
         </div>
       </div>
     </div>
   </section>
-
-  <!-- Team -->
-  <div style="background:var(--dark2); padding:1px 0">
-  <section>
-    <div class="section-label">The Team</div>
-    <h2 class="section-title">Meet Our <em>Experts</em></h2>
-    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:2rem; margin-top:2rem;">
-      <div class="fade-up" style="text-align:center; padding:2rem; border:1px solid rgba(201,168,76,0.1)">
-        <div style="width:80px;height:80px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;font-size:2rem;margin:0 auto 1rem">S</div>
-        <div style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--cream)">Rupali Singh</div>
-        <div style="color:var(--gold);font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;margin-top:0.3rem">Founder & CEO</div>
-      </div>
-      <div class="fade-up" style="text-align:center; padding:2rem; border:1px solid rgba(201,168,76,0.1); transition-delay:0.1s">
-        <div style="width:80px;height:80px;border-radius:50%;background:var(--dark3);border:1px solid var(--gold);display:flex;align-items:center;justify-content:center;font-size:2rem;margin:0 auto 1rem">R</div>
-        <div style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--cream)">Rupali Singh</div>
-        <div style="color:var(--gold);font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;margin-top:0.3rem">Head Designer</div>
-      </div>
-      <div class="fade-up" style="text-align:center; padding:2rem; border:1px solid rgba(201,168,76,0.1); transition-delay:0.2s">
-        <div style="width:80px;height:80px;border-radius:50%;background:var(--dark3);border:1px solid var(--gold);display:flex;align-items:center;justify-content:center;font-size:2rem;margin:0 auto 1rem">F</div>
-        <div style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--cream)">Rupali Singh</div>
-        <div style="color:var(--gold);font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;margin-top:0.3rem">Bridal Specialist</div>
-      </div>
-      <div class="fade-up" style="text-align:center; padding:2rem; border:1px solid rgba(201,168,76,0.1); transition-delay:0.3s">
-        <div style="width:80px;height:80px;border-radius:50%;background:var(--dark3);border:1px solid var(--gold);display:flex;align-items:center;justify-content:center;font-size:2rem;margin:0 auto 1rem">A</div>
-        <div style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--cream)">Rupali Singh</div>
-        <div style="color:var(--gold);font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;margin-top:0.3rem">Style Consultant</div>
-      </div>
-    </div>
-  </section>
-  </div>
 </div>
-<!-- END ABOUT -->
 
 <!-- ====== CONTACT PAGE ====== -->
 <div id="page-contact" class="page">
   <div style="padding:8rem 3rem 4rem; text-align:center; background:linear-gradient(to bottom, #161616, #0d0d0d)">
     <div class="section-label" style="justify-content:center">Get In Touch</div>
     <h1 class="section-title">Contact <em>Us</em></h1>
-    <p style="color:var(--text-dim); max-width:400px; margin:0 auto; font-size:0.9rem; line-height:1.8">Koi sawaal? Koi order? Ya sirf baat karni hai? Hum yahan hain!</p>
+    <p style="color:var(--text-dim); max-width:400px; margin:0 auto; font-size:0.9rem; line-height:1.8">Koi sawaal? Koi order? Hum yahan hain!</p>
   </div>
   <section>
     <div class="contact-grid">
       <div class="contact-info side-entry">
         <h2>Meets <em style="color:var(--gold);font-style:italic">Us</em></h2>
-        <p style="color:var(--text-dim); margin:1.5rem 0; font-size:0.9rem; line-height:1.8">SR Closet ki dedicated team hamesha aap ki madad ke liye tayyar hai. Neeche diye gaye channels se contact karain.</p>
-        <div class="contact-detail">
-          <div class="contact-icon">📍</div>
-          <div><div class="contact-label">Address</div><div class="contact-value">Near Government medical College Thiruvananthapuram New pg hostel near CDC 695011 trivandrum india</div></div>
-        </div>
-        <div class="contact-detail">
-          <div class="contact-icon">📱</div>
-          <div><div class="contact-label">WhatsApp / Phone</div><div class="contact-value">+91 300 1234567</div></div>
-        </div>
-        <div class="contact-detail">
-          <div class="contact-icon">📧</div>
-          <div><div class="contact-label">Email</div><div class="contact-value">pihu12032003@gmail.com</div></div>
-        </div>
-        <div class="contact-detail">
-          <div class="contact-icon">🕐</div>
-          <div><div class="contact-label">Shop Hours</div><div class="contact-value">Mon–Sat: 10am – 8pm<br>Sunday: 12pm – 6pm</div></div>
-        </div>
-        <div class="contact-detail">
-          <div class="contact-icon">📸</div>
-          <div><div class="contact-label">Instagram</div><div class="contact-value">gooofypuppy</div></div>
-        </div>
+        <p style="color:var(--text-dim); margin:1.5rem 0; font-size:0.9rem; line-height:1.8">SR Closet ki dedicated team hamesha aap ki madad ke liye tayyar hai.</p>
+        <div class="contact-detail"><div class="contact-icon">📍</div><div><div class="contact-label">Address</div><div class="contact-value">Near Government medical College Thiruvananthapuram 695011 trivandrum india</div></div></div>
+        <div class="contact-detail"><div class="contact-icon">📱</div><div><div class="contact-label">WhatsApp / Phone</div><div class="contact-value">+91 300 1234567</div></div></div>
+        <div class="contact-detail"><div class="contact-icon">📧</div><div><div class="contact-label">Email</div><div class="contact-value">pihu12032003@gmail.com</div></div></div>
+        <div class="contact-detail"><div class="contact-icon">🕐</div><div><div class="contact-label">Shop Hours</div><div class="contact-value">Mon–Sat: 10am – 8pm<br>Sunday: 12pm – 6pm</div></div></div>
+        <div class="contact-detail"><div class="contact-icon">📸</div><div><div class="contact-label">Instagram</div><div class="contact-value">gooofypuppy</div></div></div>
       </div>
       <div class="contact-form side-entry-right">
         <div class="section-label" style="margin-bottom:2rem">Send Message</div>
         <div class="form-row">
-          <div class="form-group">
-            <label class="form-label">Your Name</label>
-            <input type="text" class="form-input" placeholder="Name">
-          </div>
-          <div class="form-group">
-            <label class="form-label">Phone Number</label>
-            <input type="tel" class="form-input" placeholder="+91 3xx xxxxxxx">
-          </div>
+          <div class="form-group"><label class="form-label">Your Name</label><input type="text" class="form-input" placeholder="Name"></div>
+          <div class="form-group"><label class="form-label">Phone Number</label><input type="tel" class="form-input" placeholder="+91 3xx xxxxxxx"></div>
         </div>
-        <div class="form-group">
-          <label class="form-label">Email Address</label>
-          <input type="email" class="form-input" placeholder="rupali@gmail.com">
-        </div>
-        <div class="form-group">
-          <label class="form-label">Service Needed</label>
-          <select class="form-input" style="cursor:pointer">
-            <option value="">Select karein</option>
-            <option>Ready-to-Wear Order</option>
-            <option>Custom Stitching</option>
-            <option>Bridal Package</option>
-            <option>Style Consultation</option>
-            <option>Other</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label class="form-label">Your Message</label>
-          <textarea class="form-textarea" placeholder="Apna paigham yahan likhein..."></textarea>
-        </div>
+        <div class="form-group"><label class="form-label">Email Address</label><input type="email" class="form-input" placeholder="rupali@gmail.com"></div>
+        <div class="form-group"><label class="form-label">Service Needed</label><select class="form-input" style="cursor:pointer"><option value="">Select karein</option><option>Ready-to-Wear Order</option><option>Custom Stitching</option><option>Bridal Package</option><option>Style Consultation</option><option>Other</option></select></div>
+        <div class="form-group"><label class="form-label">Your Message</label><textarea class="form-textarea" placeholder="Apna paigham yahan likhein..."></textarea></div>
         <button class="btn-primary" style="width:100%" onclick="submitForm()">Send Message ✦</button>
       </div>
     </div>
   </section>
 </div>
-<!-- END CONTACT -->
+
+<!-- ====== AUTH MODAL ====== -->
+<div class="auth-overlay" id="authOverlay" onclick="authBgClick(event)">
+  <div class="auth-card" id="authCard">
+    <button class="auth-close" onclick="closeAuth()">✕</button>
+
+    <!-- Left panel -->
+    <div class="auth-left-panel">
+      <div>
+        <div class="alp-brand">SR CLOSET</div>
+        <div class="alp-sub">Luxury Fashion</div>
+      </div>
+      <div class="alp-quote" id="alpQuote">
+        Style is a way to say who you are without having to speak.
+      </div>
+      <ul class="alp-features">
+        <li>Personal Styling</li>
+        <li>Exclusive Collections</li>
+        <li>Bridal Packages</li>
+        <li>Priority Booking</li>
+      </ul>
+    </div>
+
+    <!-- Right panel -->
+    <div class="auth-right-panel">
+      <div class="auth-tabs">
+        <button class="auth-tab active" id="authT1" onclick="authSwitchTab('login')">Sign In</button>
+        <button class="auth-tab" id="authT2" onclick="authSwitchTab('register')">Create Account</button>
+      </div>
+
+      <!-- LOGIN -->
+      <div class="auth-panel active" id="authPLogin">
+        <div class="auth-heading">Welcome back</div>
+        <div class="auth-subtext">Sign in to manage your bookings.</div>
+        <form onsubmit="authDoLogin(event)">
+          <div class="auth-group">
+            <label>Email Address</label>
+            <input type="email" id="authLE" placeholder="you@example.com" />
+            <div class="auth-err-msg" id="authLEe">Please enter a valid email.</div>
+          </div>
+          <div class="auth-group">
+            <label>Password</label>
+            <input type="password" id="authLP" placeholder="••••••••" />
+            <div class="auth-err-msg" id="authLPe">Password is required.</div>
+          </div>
+          <div class="auth-forgot"><a href="#">Forgot password?</a></div>
+          <button type="submit" class="auth-submit">Sign In &amp; Book ✦</button>
+        </form>
+      </div>
+
+      <!-- REGISTER -->
+      <div class="auth-panel" id="authPReg">
+        <div class="auth-heading">Create account</div>
+        <div class="auth-subtext">Join SR Closet to book your first appointment.</div>
+        <form onsubmit="authDoReg(event)">
+          <div class="auth-row">
+            <div class="auth-group">
+              <label>First Name</label>
+              <input type="text" id="authRF" placeholder="Sara" />
+              <div class="auth-err-msg" id="authRFe">Required.</div>
+            </div>
+            <div class="auth-group">
+              <label>Last Name</label>
+              <input type="text" id="authRL" placeholder="Rahman" />
+            </div>
+          </div>
+          <div class="auth-group">
+            <label>Email Address</label>
+            <input type="email" id="authRE" placeholder="you@example.com" />
+            <div class="auth-err-msg" id="authREe">Enter a valid email.</div>
+          </div>
+          <div class="auth-group">
+            <label>Phone Number</label>
+            <input type="tel" id="authRPH" placeholder="+91 300 0000000" />
+          </div>
+          <div class="auth-group">
+            <label>Password</label>
+            <input type="password" id="authRP" placeholder="Min. 8 characters" />
+            <div class="auth-err-msg" id="authRPe">Min 8 characters required.</div>
+          </div>
+          <button type="submit" class="auth-submit">Create Account ✦</button>
+        </form>
+      </div>
+
+      <!-- SUCCESS -->
+      <div class="auth-success" id="authSuccess">
+        <div class="auth-success-icon">✦</div>
+        <h3 id="authSuccessT">You're in!</h3>
+        <p id="authSuccessS">Redirecting to your booking…</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PRODUCT MODALS -->
+<div class="modal-overlay" id="roshniModal" onclick="closeModal(event)">
+  <div class="modal-box">
+    <div class="modal-imgs">
+      <button class="modal-close-btn" onclick="document.getElementById('roshniModal').classList.remove('open');document.body.style.overflow=''">✕</button>
+      <img class="modal-main-img" id="roshniMainImg" src="pink.jpeg" alt="Roshni Party Suit" onerror="this.style.display='none'">
+      <div class="modal-thumbs">
+        <img class="modal-thumb active" src="pink.jpeg" onclick="changeRoshniImg(this,'pink.jpeg')" alt="Look 1" onerror="this.style.display='none'">
+        <img class="modal-thumb" src="pink.jpeg" onclick="changeRoshniImg(this,'pink.jpeg')" alt="Look 2" onerror="this.style.display='none'">
+        <img class="modal-thumb" src="pink.jpeg" onclick="changeRoshniImg(this,'pink.jpeg')" alt="Look 3" onerror="this.style.display='none'">
+      </div>
+    </div>
+    <div class="modal-details">
+      <div class="modal-brand">✦ SR Closet — Party Wear Collection 2025</div>
+      <div class="modal-name">Roshni Party Suit</div>
+      <div class="modal-price">INR 2,500 <span style="font-size:0.85rem;color:var(--text-dim);text-decoration:line-through;margin-left:0.5rem">INR 3,200</span></div>
+      <p class="modal-desc">Roshni — jo mehfil ko roshan kar de. Premium chiffon fabric par intricate thread embroidery ke saath tayaar kiya gaya hai.</p>
+      <div class="modal-divider"></div>
+      <div class="modal-label">Size Select Karein</div>
+      <div class="size-grid">
+        <button class="size-btn" onclick="selectSize(this)">XS</button><button class="size-btn active" onclick="selectSize(this)">S</button><button class="size-btn" onclick="selectSize(this)">M</button><button class="size-btn" onclick="selectSize(this)">L</button><button class="size-btn" onclick="selectSize(this)">XL</button><button class="size-btn" onclick="selectSize(this)">XXL</button><button class="size-btn" onclick="selectSize(this)">Custom</button>
+      </div>
+      <div class="modal-btns">
+        <button class="btn-primary" style="flex:1" onclick="roshniOrderNow()">Order Now ✦</button>
+        <button class="btn-outline" onclick="roshniWhatsapp()">WhatsApp 📱</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="gulnaarModal" onclick="closeModal(event)">
+  <div class="modal-box">
+    <div class="modal-imgs">
+      <button class="modal-close-btn" onclick="document.getElementById('gulnaarModal').classList.remove('open');document.body.style.overflow=''">✕</button>
+      <img class="modal-main-img" id="modalMainImg" src="red2.jpeg" alt="Gulnaar Bridal" onerror="this.style.display='none'">
+      <div class="modal-thumbs">
+        <img class="modal-thumb active" src="red2.jpeg" onclick="changeImg(this,'red2.jpeg')" alt="Look 1" onerror="this.style.display='none'">
+        <img class="modal-thumb" src="red2.jpeg" onclick="changeImg(this,'red2.jpeg')" alt="Look 2" onerror="this.style.display='none'">
+        <img class="modal-thumb" src="red2.jpeg" onclick="changeImg(this,'red2.jpeg')" alt="Look 3" onerror="this.style.display='none'">
+      </div>
+    </div>
+    <div class="modal-details">
+      <div class="modal-brand">✦ SR Closet — Bridal Collection 2025</div>
+      <div class="modal-name">Gulnaar Bridal Lehenga</div>
+      <div class="modal-price">INR 1,999 <span style="font-size:0.85rem;color:var(--text-dim);text-decoration:line-through;margin-left:0.5rem">INR 2,500</span></div>
+      <p class="modal-desc">Gulnaar — phoolon ki malika. Pure silk fabric par hand-embroidered zardozi kaam ke saath banaya gaya hai.</p>
+      <div class="modal-divider"></div>
+      <div class="modal-label">Size Select Karein</div>
+      <div class="size-grid">
+        <button class="size-btn" onclick="selectSize(this)">XS</button><button class="size-btn active" onclick="selectSize(this)">S</button><button class="size-btn" onclick="selectSize(this)">M</button><button class="size-btn" onclick="selectSize(this)">L</button><button class="size-btn" onclick="selectSize(this)">XL</button><button class="size-btn" onclick="selectSize(this)">XXL</button><button class="size-btn" onclick="selectSize(this)">Custom</button>
+      </div>
+      <div class="modal-btns">
+        <button class="btn-primary" style="flex:1" onclick="orderNow()">Order Now ✦</button>
+        <button class="btn-outline" onclick="whatsappOrder()">WhatsApp 📱</button>
+      </div>
+      <p style="color:var(--text-dim);font-size:0.72rem;margin-top:1rem;text-align:center">⚡ Sirf 3 pieces available — Jaldi karein!</p>
+    </div>
+  </div>
+</div>
 
 <!-- FOOTER -->
 <footer>
@@ -1143,10 +1340,7 @@ SR closet brings you international fashion at your doorstep now!!</p>
       <div class="footer-brand">SR CLOSET</div>
       <p class="footer-desc">India ka premium fashion destination. Quality, style, aur trust — ye hamara waada hai aap se.</p>
       <div class="social-links" style="margin-top:1.5rem">
-        <a class="social-link">f</a>
-        <a class="social-link">in</a>
-        <a class="social-link">yt</a>
-        <a class="social-link">wa</a>
+        <a class="social-link">f</a><a class="social-link">in</a><a class="social-link">yt</a><a class="social-link">wa</a>
       </div>
     </div>
     <div>
@@ -1161,21 +1355,13 @@ SR closet brings you international fashion at your doorstep now!!</p>
     <div>
       <div class="footer-title">Collections</div>
       <ul class="footer-links">
-        <li><a href="#">Bridal Wear</a></li>
-        <li><a href="#">Party Wear</a></li>
-        <li><a href="#">Casual Lawn</a></li>
-        <li><a href="#">Formal Wear</a></li>
-        <li><a href="#">Eid Special</a></li>
+        <li><a href="#">Bridal Wear</a></li><li><a href="#">Party Wear</a></li><li><a href="#">Casual Lawn</a></li><li><a href="#">Formal Wear</a></li><li><a href="#">Eid Special</a></li>
       </ul>
     </div>
     <div>
       <div class="footer-title">Support</div>
       <ul class="footer-links">
-        <li><a href="#" onclick="showPage('contact')">Contact Us</a></li>
-        <li><a href="#">Size Guide</a></li>
-        <li><a href="#">Return Policy</a></li>
-        <li><a href="#">Track Order</a></li>
-        <li><a href="#" onclick="showPage('about')">About Us</a></li>
+        <li><a href="#" onclick="showPage('contact')">Contact Us</a></li><li><a href="#">Size Guide</a></li><li><a href="#">Return Policy</a></li><li><a href="#">Track Order</a></li><li><a href="#" onclick="showPage('about')">About Us</a></li>
       </ul>
     </div>
   </div>
@@ -1185,104 +1371,161 @@ SR closet brings you international fashion at your doorstep now!!</p>
   </div>
 </footer>
 
-<!-- TOAST -->
 <div class="toast" id="toast">Message sent successfully! ✦</div>
 
 <script>
-// PAGE NAVIGATION
-function showPage(name) {
-  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-  document.getElementById('page-' + name).classList.add('active');
-  window.scrollTo({top:0, behavior:'smooth'});
-  setTimeout(initAnimations, 100);
-}
-
-// LOADER
-window.addEventListener('load', () => {
-  setTimeout(() => {
-    document.getElementById('loader').classList.add('hide');
-    initAnimations();
-  }, 1800);
-});
-
-// SLIDER
-function slideRight(id) {
-  const el = document.getElementById(id);
-  el.scrollBy({left:320, behavior:'smooth'});
-}
-function slideLeft(id) {
-  const el = document.getElementById(id);
-  el.scrollBy({left:-320, behavior:'smooth'});
-}
-
-// SCROLL ANIMATIONS
-function initAnimations() {
-  const obs = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if(e.isIntersecting) {
-        e.target.classList.add('visible');
-      }
-    });
-  }, {threshold:0.1});
-  document.querySelectorAll('.side-entry, .side-entry-right, .fade-up').forEach(el => {
-    el.classList.remove('visible');
-    obs.observe(el);
-  });
-}
-
-// NAV SCROLL
-window.addEventListener('scroll', () => {
-  const nav = document.getElementById('navbar');
-  if(window.scrollY > 50) {
-    nav.style.background = 'rgba(13,13,13,0.98)';
-  } else {
-    nav.style.background = 'rgba(13,13,13,0.85)';
+  /* ── AUTH MODAL ── */
+  function goToLogin() {
+    document.getElementById('authOverlay').classList.add('open');
+    document.body.style.overflow = 'hidden';
+    authSwitchTab('login');
+    authReset();
   }
-});
-
-// MOBILE NAV
-function toggleMobile() {
-  document.getElementById('mobileNav').classList.toggle('open');
-}
-
-// GALLERY FILTER
-function filterGallery(cat, btn) {
-  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  document.querySelectorAll('.gallery-item').forEach(item => {
-    if(cat === 'all' || item.dataset.cat === cat) {
-      item.style.display = 'block';
-      item.style.animation = 'fadeInPage 0.5s ease';
-    } else {
-      item.style.display = 'none';
-    }
+  function closeAuth() {
+    document.getElementById('authOverlay').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  function authBgClick(e) {
+    if (e.target === document.getElementById('authOverlay')) closeAuth();
+  }
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeAuth();
   });
-}
+  function authSwitchTab(t) {
+    var isLogin = t === 'login';
+    document.getElementById('authPLogin').classList.toggle('active', isLogin);
+    document.getElementById('authPReg').classList.toggle('active', !isLogin);
+    document.getElementById('authT1').classList.toggle('active', isLogin);
+    document.getElementById('authT2').classList.toggle('active', !isLogin);
+    document.getElementById('authSuccess').classList.remove('show');
+    document.getElementById('authPLogin').style.display = '';
+    document.getElementById('authPReg').style.display = '';
+    document.getElementById('alpQuote').textContent = isLogin
+      ? 'Style is a way to say who you are without having to speak.'
+      : "Elegance is not about being noticed, it's about being remembered.";
+  }
+  function authReset() {
+    ['authLE','authLP','authRF','authRL','authRE','authRPH','authRP'].forEach(function(id) {
+      var el = document.getElementById(id);
+      if (el) { el.value = ''; el.classList.remove('auth-err'); }
+    });
+    document.querySelectorAll('.auth-err-msg').forEach(function(e) { e.classList.remove('show'); });
+    document.getElementById('authSuccess').classList.remove('show');
+    document.getElementById('authPLogin').style.display = '';
+    document.getElementById('authPReg').style.display = '';
+  }
+  function authSetErr(iId, eId) {
+    document.getElementById(iId).classList.add('auth-err');
+    document.getElementById(eId).classList.add('show');
+  }
+  function authClrErr(iId, eId) {
+    document.getElementById(iId).classList.remove('auth-err');
+    document.getElementById(eId).classList.remove('show');
+  }
+  function authDoLogin(e) {
+    e.preventDefault();
+    authClrErr('authLE','authLEe'); authClrErr('authLP','authLPe');
+    var email = document.getElementById('authLE').value.trim();
+    var pass  = document.getElementById('authLP').value;
+    var ok = true;
+    if (!email || !/\S+@\S+\.\S+/.test(email)) { authSetErr('authLE','authLEe'); ok = false; }
+    if (!pass) { authSetErr('authLP','authLPe'); ok = false; }
+    if (!ok) return;
+    document.getElementById('authPLogin').style.display = 'none';
+    document.getElementById('authSuccessT').textContent = 'Welcome back!';
+    document.getElementById('authSuccessS').textContent = 'You have signed in. Redirecting to booking…';
+    document.getElementById('authSuccess').classList.add('show');
+  }
+  function authDoReg(e) {
+    e.preventDefault();
+    authClrErr('authRF','authRFe'); authClrErr('authRE','authREe'); authClrErr('authRP','authRPe');
+    var first = document.getElementById('authRF').value.trim();
+    var email = document.getElementById('authRE').value.trim();
+    var pass  = document.getElementById('authRP').value;
+    var ok = true;
+    if (!first) { authSetErr('authRF','authRFe'); ok = false; }
+    if (!email || !/\S+@\S+\.\S+/.test(email)) { authSetErr('authRE','authREe'); ok = false; }
+    if (pass.length < 8) { authSetErr('authRP','authRPe'); ok = false; }
+    if (!ok) return;
+    document.getElementById('authPReg').style.display = 'none';
+    document.getElementById('authSuccessT').textContent = 'Account Created!';
+    document.getElementById('authSuccessS').textContent = 'Welcome to SR Closet. Redirecting to booking…';
+    document.getElementById('authSuccess').classList.add('show');
+  }
 
-// CONTACT FORM
-function submitForm() {
-  const toast = document.getElementById('toast');
-  toast.classList.add('show');
-  setTimeout(() => toast.classList.remove('show'), 3500);
-}
-
-// CARD HOVER 3D effect
-document.addEventListener('mousemove', e => {
-  document.querySelectorAll('.collection-card').forEach(card => {
-    const rect = card.getBoundingClientRect();
-    const x = e.clientX - rect.left - rect.width/2;
-    const y = e.clientY - rect.top - rect.height/2;
-    const inCard = e.clientX > rect.left && e.clientX < rect.right && e.clientY > rect.top && e.clientY < rect.bottom;
-    if(inCard) {
-      card.style.transform = `perspective(600px) rotateX(${-y/30}deg) rotateY(${x/30}deg) translateY(-8px)`;
-    } else {
-      card.style.transform = '';
-    }
+  /* ── REST OF EXISTING JS ── */
+  function showPage(name) {
+    document.querySelectorAll('.page').forEach(function(p) { p.classList.remove('active'); });
+    document.getElementById('page-' + name).classList.add('active');
+    window.scrollTo({top:0, behavior:'smooth'});
+    setTimeout(initAnimations, 100);
+  }
+  window.addEventListener('load', function() {
+    setTimeout(function() {
+      document.getElementById('loader').classList.add('hide');
+      initAnimations();
+    }, 1800);
   });
-});
-
-// INIT
-initAnimations();
+  function slideRight(id) { document.getElementById(id).scrollBy({left:320, behavior:'smooth'}); }
+  function slideLeft(id)  { document.getElementById(id).scrollBy({left:-320, behavior:'smooth'}); }
+  function initAnimations() {
+    var obs = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) { if(e.isIntersecting) e.target.classList.add('visible'); });
+    }, {threshold:0.1});
+    document.querySelectorAll('.side-entry, .side-entry-right, .fade-up').forEach(function(el) {
+      el.classList.remove('visible'); obs.observe(el);
+    });
+  }
+  window.addEventListener('scroll', function() {
+    var nav = document.getElementById('navbar');
+    nav.style.background = window.scrollY > 50 ? 'rgba(13,13,13,0.98)' : 'rgba(13,13,13,0.85)';
+  });
+  function toggleMobile() { document.getElementById('mobileNav').classList.toggle('open'); }
+  function filterGallery(cat, btn) {
+    document.querySelectorAll('.filter-btn').forEach(function(b) { b.classList.remove('active'); });
+    btn.classList.add('active');
+    document.querySelectorAll('.gallery-item').forEach(function(item) {
+      item.style.display = (cat === 'all' || item.dataset.cat === cat) ? 'block' : 'none';
+    });
+  }
+  function submitForm() {
+    var toast = document.getElementById('toast');
+    toast.classList.add('show');
+    setTimeout(function() { toast.classList.remove('show'); }, 3500);
+  }
+  document.addEventListener('mousemove', function(e) {
+    document.querySelectorAll('.collection-card').forEach(function(card) {
+      var rect = card.getBoundingClientRect();
+      var x = e.clientX - rect.left - rect.width/2;
+      var y = e.clientY - rect.top - rect.height/2;
+      var inCard = e.clientX > rect.left && e.clientX < rect.right && e.clientY > rect.top && e.clientY < rect.bottom;
+      card.style.transform = inCard ? 'perspective(600px) rotateX('+(-y/30)+'deg) rotateY('+(x/30)+'deg) translateY(-8px)' : '';
+    });
+  });
+  function openGulnaar() { document.getElementById('gulnaarModal').classList.add('open'); document.body.style.overflow='hidden'; }
+  function openRoshni()  { document.getElementById('roshniModal').classList.add('open');  document.body.style.overflow='hidden'; }
+  function closeModal(e) {
+    if(e.target === e.currentTarget) { e.currentTarget.classList.remove('open'); document.body.style.overflow=''; }
+  }
+  function changeImg(thumb, src) {
+    document.getElementById('modalMainImg').src = src;
+    document.querySelectorAll('.modal-thumb').forEach(function(t) { t.classList.remove('active'); });
+    thumb.classList.add('active');
+  }
+  function changeRoshniImg(thumb, src) {
+    document.getElementById('roshniMainImg').src = src;
+    document.querySelectorAll('#roshniModal .modal-thumb').forEach(function(t) { t.classList.remove('active'); });
+    thumb.classList.add('active');
+  }
+  function selectSize(btn) {
+    document.querySelectorAll('.size-btn').forEach(function(b) { b.classList.remove('active'); });
+    btn.classList.add('active');
+  }
+  function orderNow() { document.getElementById('gulnaarModal').classList.remove('open'); document.body.style.overflow=''; showPage('contact'); }
+  function roshniOrderNow() { document.getElementById('roshniModal').classList.remove('open'); document.body.style.overflow=''; showPage('contact'); }
+  function whatsappOrder() { window.open('https://wa.me/91300XXXXXXX?text=Assalam%20o%20Alaikum!%20Mujhe%20Gulnaar%20Bridal%20Lehenga%20order%20karni%20hai.','_blank'); }
+  function roshniWhatsapp() { window.open('https://wa.me/91300XXXXXXX?text=Assalam%20o%20Alaikum!%20Mujhe%20Roshni%20Party%20Suit%20order%20karni%20hai.','_blank'); }
+  initAnimations();
 </script>
 </body>
 </html>
