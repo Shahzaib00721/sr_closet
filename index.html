@@ -817,18 +817,31 @@
     .auth-right-panel { padding: 36px 24px; }
     .auth-row { grid-template-columns: 1fr; }
   }
+
+  .btn0
+{
+  background-color: white;
+  color: black;
+  transform: translate(1660px, 750px);
+  cursor: pointer;
+  padding: 5px;
+  
+  position: absolute;
+}
 </style>
 </head>
 <body>
 
-<!-- LOADER -->
-<div id="loader">
-  <div class="loader-logo">SR</div>
-  <div class="loader-line"></div>
-</div>
-
-<!-- NAV -->
-<nav id="navbar">
+  
+  <!-- LOADER -->
+  <div id="loader">
+    <div class="loader-logo">SR</div>
+    <div class="loader-line"></div>
+  </div>
+  
+  <!-- NAV -->
+  <nav id="navbar">
+  <button class="btn0">Click Me</button>
   <div class="nav-logo" onclick="showPage('home')">SR CLOSET</div>
   <ul class="nav-links">
     <li><a href="#" onclick="showPage('home')">Home</a></li>
@@ -912,7 +925,7 @@
           </div>
         </div>
       </div>
-      <div class="collection-card fade-up" style="transition-delay:0.3s">
+      <div class="collection-card fade-up" style="transition-delay:0.3s; cursor:pointer" onclick="openMehrab()">
         <div class="card-img dress-bg-3">
           <div class="card-img-inner" style="display:flex; align-items:center; justify-content:center; overflow:hidden;"><img src="pic1.jpeg" style="max-width:100%; max-height:100%; object-fit:contain" alt=""></div>
           <div class="card-overlay">
@@ -923,7 +936,7 @@
           <div class="card-badge">Sale</div>
         </div>
       </div>
-      <div class="collection-card fade-up" style="transition-delay:0.4s">
+      <div class="collection-card fade-up" style="transition-delay:0.4s; cursor:pointer" onclick="openZara()">
         <div class="card-img dress-bg-4">
           <div class="card-img-inner" style="display:flex; align-items:center; justify-content:center; overflow:hidden;"><img src="pic2.jpeg" style="max-width:100%; max-height:100%; object-fit:contain" alt=""></div>
           <div class="card-overlay">
@@ -1333,6 +1346,78 @@
   </div>
 </div>
 
+<div class="modal-overlay" id="mehrabModal" onclick="closeModal(event)">
+  <div class="modal-box">
+    <div class="modal-imgs">
+      <button class="modal-close-btn" onclick="document.getElementById('mehrabModal').classList.remove('open');document.body.style.overflow=''">✕</button>
+      <img class="modal-main-img" id="mehrabMainImg" src="pic1.jpeg" alt="Mehrab Formal" onerror="this.style.display='none'">
+      <div class="modal-thumbs">
+        <img class="modal-thumb active" src="pic1.jpeg" onclick="changeMehrabImg(this,'pic1.jpeg')" alt="Look 1" onerror="this.style.display='none'">
+        <img class="modal-thumb" src="pic1.jpeg" onclick="changeMehrabImg(this,'pic1.jpeg')" alt="Look 2" onerror="this.style.display='none'">
+        <img class="modal-thumb" src="pic1.jpeg" onclick="changeMehrabImg(this,'pic1.jpeg')" alt="Look 3" onerror="this.style.display='none'">
+      </div>
+    </div>
+    <div class="modal-details">
+      <div class="modal-brand">✦ SR Closet — Formal Collection 2025</div>
+      <div class="modal-name">Mehrab Formal Suit</div>
+      <div class="modal-price">INR 2,000 <span style="font-size:0.85rem;color:var(--text-dim);text-decoration:line-through;margin-left:0.5rem">INR 2,800</span></div>
+      <p class="modal-desc">Mehrab — elegance ki misaal. Premium lawn fabric par delicate embroidery ke saath, office se mehfil tak har jagah perfect.</p>
+      <div class="modal-divider"></div>
+      <div class="modal-label">Size Select Karein</div>
+      <div class="size-grid">
+        <button class="size-btn" onclick="selectSize(this)">XS</button>
+        <button class="size-btn active" onclick="selectSize(this)">S</button>
+        <button class="size-btn" onclick="selectSize(this)">M</button>
+        <button class="size-btn" onclick="selectSize(this)">L</button>
+        <button class="size-btn" onclick="selectSize(this)">XL</button>
+        <button class="size-btn" onclick="selectSize(this)">XXL</button>
+        <button class="size-btn" onclick="selectSize(this)">Custom</button>
+      </div>
+      <div class="modal-btns">
+        <button class="btn-primary" style="flex:1" onclick="mehrabOrderNow()">Order Now ✦</button>
+        <button class="btn-outline" onclick="mehrabWhatsapp()">WhatsApp 📱</button>
+      </div>
+      <p style="color:var(--text-dim);font-size:0.72rem;margin-top:1rem;text-align:center">🏷️ Sale Price — Limited Time Offer!</p>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="zaraModal" onclick="closeModal(event)">
+  <div class="modal-box">
+    <div class="modal-imgs">
+      <button class="modal-close-btn" onclick="document.getElementById('zaraModal').classList.remove('open');document.body.style.overflow=''">✕</button>
+      <img class="modal-main-img" id="zaraMainImg" src="pic2.jpeg" alt="Zara Casual Lawn" onerror="this.style.display='none'">
+      <div class="modal-thumbs">
+        <img class="modal-thumb active" src="pic2.jpeg" onclick="changeZaraImg(this,'pic2.jpeg')" alt="Look 1" onerror="this.style.display='none'">
+        <img class="modal-thumb" src="pic2.jpeg" onclick="changeZaraImg(this,'pic2.jpeg')" alt="Look 2" onerror="this.style.display='none'">
+        <img class="modal-thumb" src="pic2.jpeg" onclick="changeZaraImg(this,'pic2.jpeg')" alt="Look 3" onerror="this.style.display='none'">
+      </div>
+    </div>
+    <div class="modal-details">
+      <div class="modal-brand">✦ SR Closet — Casual Lawn Collection 2025</div>
+      <div class="modal-name">Zara Casual Lawn</div>
+      <div class="modal-price">INR 3,500 <span style="font-size:0.85rem;color:var(--text-dim);text-decoration:line-through;margin-left:0.5rem">INR 4,200</span></div>
+      <p class="modal-desc">Zara — rozmarra ki khubsurti. Soft lawn fabric par vibrant prints ke saath, ghar se bahar — har waqt fresh aur stylish.</p>
+      <div class="modal-divider"></div>
+      <div class="modal-label">Size Select Karein</div>
+      <div class="size-grid">
+        <button class="size-btn" onclick="selectSize(this)">XS</button>
+        <button class="size-btn active" onclick="selectSize(this)">S</button>
+        <button class="size-btn" onclick="selectSize(this)">M</button>
+        <button class="size-btn" onclick="selectSize(this)">L</button>
+        <button class="size-btn" onclick="selectSize(this)">XL</button>
+        <button class="size-btn" onclick="selectSize(this)">XXL</button>
+        <button class="size-btn" onclick="selectSize(this)">Custom</button>
+      </div>
+      <div class="modal-btns">
+        <button class="btn-primary" style="flex:1" onclick="zaraOrderNow()">Order Now ✦</button>
+        <button class="btn-outline" onclick="zaraWhatsapp()">WhatsApp 📱</button>
+      </div>
+      <p style="color:var(--text-dim);font-size:0.72rem;margin-top:1rem;text-align:center">🌸 Summer Special — Bilkul Fresh Designs!</p>
+    </div>
+  </div>
+</div>
+
 <!-- FOOTER -->
 <footer>
   <div class="footer-grid">
@@ -1371,9 +1456,61 @@
   </div>
 </footer>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="toast" id="toast">Message sent successfully! ✦</div>
 
 <script>
+
+
+
+
+
+
+function openMehrab()  { document.getElementById('mehrabModal').classList.add('open');  document.body.style.overflow='hidden'; }
+function openZara()    { document.getElementById('zaraModal').classList.add('open');    document.body.style.overflow='hidden'; }
+function mehrabOrderNow() { document.getElementById('mehrabModal').classList.remove('open'); document.body.style.overflow=''; showPage('contact'); }
+function zaraOrderNow()   { document.getElementById('zaraModal').classList.remove('open');   document.body.style.overflow=''; showPage('contact'); }
+function mehrabWhatsapp() { window.open('https://wa.me/91300XXXXXXX?text=Mujhe%20Mehrab%20Formal%20Suit%20order%20karni%20hai.','_blank'); }
+function zaraWhatsapp()   { window.open('https://wa.me/91300XXXXXXX?text=Mujhe%20Zara%20Casual%20Lawn%20order%20karni%20hai.','_blank'); }
+function changeMehrabImg(thumb, src) {
+  document.getElementById('mehrabMainImg').src = src;
+  document.querySelectorAll('#mehrabModal .modal-thumb').forEach(function(t) { t.classList.remove('active'); });
+  thumb.classList.add('active');
+}
+function changeZaraImg(thumb, src) {
+  document.getElementById('zaraMainImg').src = src;
+  document.querySelectorAll('#zaraModal .modal-thumb').forEach(function(t) { t.classList.remove('active'); });
+  thumb.classList.add('active');
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   /* ── AUTH MODAL ── */
   function goToLogin() {
     document.getElementById('authOverlay').classList.add('open');
@@ -1428,7 +1565,7 @@
     var email = document.getElementById('authLE').value.trim();
     var pass  = document.getElementById('authLP').value;
     var ok = true;
-    if (!email || !/\S+@\S+\.\S+/.test(email)) { authSetErr('authLE','authLEe'); ok = false; }
+    if (!email || !/\S+@\S+\.\S+/.test(email)) { authSetErr('authLE','authLEe'); ok = false; } 
     if (!pass) { authSetErr('authLP','authLPe'); ok = false; }
     if (!ok) return;
     document.getElementById('authPLogin').style.display = 'none';
@@ -1468,7 +1605,7 @@
   });
   function slideRight(id) { document.getElementById(id).scrollBy({left:320, behavior:'smooth'}); }
   function slideLeft(id)  { document.getElementById(id).scrollBy({left:-320, behavior:'smooth'}); }
-  function initAnimations() {
+  function initAnimations() { 
     var obs = new IntersectionObserver(function(entries) {
       entries.forEach(function(e) { if(e.isIntersecting) e.target.classList.add('visible'); });
     }, {threshold:0.1});
@@ -1486,7 +1623,7 @@
     btn.classList.add('active');
     document.querySelectorAll('.gallery-item').forEach(function(item) {
       item.style.display = (cat === 'all' || item.dataset.cat === cat) ? 'block' : 'none';
-    });
+    }); 
   }
   function submitForm() {
     var toast = document.getElementById('toast');
